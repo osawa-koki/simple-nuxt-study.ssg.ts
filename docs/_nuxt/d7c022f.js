@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{307:function(t,e,n){"use strict";n.r(e);var o=n(8).default.extend({name:"IndexPage"}),r=n(78),component=Object(r.a)(o,(function(){var t=this,e=t._self._c;t._self._setupProxy;return e("div",[e("img",{attrs:{src:t.$router.options.base+"tako.png",alt:"tako"}})])}),[],!1,null,null,null);e.default=component.exports}}]);
