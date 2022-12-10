@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div>
+    <img :src="$router.options.base + 'tako.png'" alt="tako" />
+  </div>
 </template>
 
 <script lang="ts">
