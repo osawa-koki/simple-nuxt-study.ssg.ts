@@ -3,16 +3,17 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 import pages from '~/pages';
 
-export default {
+export default defineComponent({
   name: 'HeaderDiv',
   data() {
     return {
       pages,
     }
   },
-}
+})
 </script>
 
 <style lang="scss" scoped>

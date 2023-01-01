@@ -19,16 +19,17 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 import pages from '~/pages';
 
-export default {
+export default defineComponent({
   name: 'IndexPage',
   data() {
     return {
       pages,
     }
   },
-}
+})
 </script>
 
 <style lang="scss" scoped>

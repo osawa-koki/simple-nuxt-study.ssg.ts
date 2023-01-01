@@ -18,6 +18,7 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 import pages from '~/pages';
 
 const MailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
@@ -25,23 +26,23 @@ const emojis = ['🥺', '👼', '😭', '😇', '😢', '😇', '😭', '👼', 
 const GetEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
 let interval: NodeJS.Timer | null = null;
 
-export default {
+export default defineComponent({
   name: 'IndexPage',
   data() {
     return {
       pages,
       emoji: GetEmoji(),
       click_count: 0,
-      click_me_icon: '🥺',
+      click_me_icon: '🥺' as string,
       mail: 'osawa-koki@example.com',
-    }
+    };
   },
   computed: {
-    MailIsValid() {
+    MailIsValid(): boolean {
       return MailRegex.test(this.mail);
     }
   },
-  mounted() {
+  mounted(): void {
     interval = setInterval(() => {
       // eslint-disable-next-line no-console
       console.log(GetEmoji());
@@ -61,8 +62,8 @@ export default {
         this.click_me_icon = '😭';
       }
     }
-  }
-}
+  },
+})
 </script>
 
 <style lang="scss" scoped>
