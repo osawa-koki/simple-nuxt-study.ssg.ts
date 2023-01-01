@@ -17,13 +17,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import pages from '~/pages';
 
 const MailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const emojis = ['🥺', '👼', '😭', '😇', '😢', '😇', '😭', '👼', '🥺'];
 const GetEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
-let interval;
+let interval: NodeJS.Timer | null = null;
 
 export default {
   name: 'IndexPage',
@@ -49,6 +49,7 @@ export default {
     }, 1000);
   },
   beforeDestroy() {
+    if (interval === null) return;
     clearInterval(interval);
   },
   methods: {

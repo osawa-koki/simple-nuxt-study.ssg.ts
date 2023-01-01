@@ -2,7 +2,7 @@
   <footer>🥺 <a href="https://github.com/osawa-koki" target="_blank">@osawa-koki</a> 🥺</footer>
 </template>
 
-<script>
+<script lang="ts">
 import pages from '~/pages';
 
 export default {
